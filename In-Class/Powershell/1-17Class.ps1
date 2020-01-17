@@ -9,4 +9,5 @@
 # List all registered services
 #Get-Service | where {$_.Status -eq "Running"}
 # List all Running Chrome Processes
-Get-Process | where {$_.ProcessName -eq "Chrome"}
+Get-Process | where {$_.ProcessName -eq "Chrome"} | export-csv -NoTypeInformation `
+-Path "C:\Users\david.serate\Desktop\Chrome.csv"
